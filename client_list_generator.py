@@ -328,7 +328,7 @@ def write_excel(records: list[ClientRecord], output_path: Path) -> None:
 class GeneratorApp(tk.Tk):
     def __init__(self) -> None:
         super().__init__()
-        self.title("Client List Generator")
+        self.title("Stamping List Generator")
         self.geometry("900x680")
         self.minsize(700, 560)
         self.pdf_paths: list[Path] = []
@@ -342,7 +342,7 @@ class GeneratorApp(tk.Tk):
 
         self.main_frame = ttk.Frame(self, padding=24, style="App.TFrame")
         self.main_frame.pack(fill="both", expand=True)
-        ttk.Label(self.main_frame, text="Client List Generator", style="Title.TLabel").pack(anchor="w")
+        ttk.Label(self.main_frame, text="Stamping List Generator", style="Title.TLabel").pack(anchor="w")
         ttk.Label(
             self.main_frame,
             text="Select stamping certificate PDFs. The Excel list will contain one row per PDF, combining machine entries from its certificate pages.",

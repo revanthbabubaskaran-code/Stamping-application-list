@@ -1,4 +1,4 @@
-# Client List Generator
+# Stamping List Generator
 
 A desktop Python program that reads stamping certificates from one or more searchable PDFs and creates an Excel workbook with one row per PDF. Machine details found across its certificate pages are listed in page order on separate lines within the matching cell. Blank pages are ignored.
 
@@ -22,7 +22,7 @@ Scanned image-only PDFs need OCR before this program can read them. The extracto
 
 ### Windows app
 
-Double-click `run.exe` in this folder. The packaged app includes its Python runtime and required libraries, so Python does not need to be installed on the computer where you run it.
+Double-click `Stamping list generator.exe` in this folder. The packaged app includes its Python runtime and required libraries, so Python does not need to be installed on the computer where you run it.
 
 ### Run from Python source
 
@@ -36,8 +36,8 @@ py client_list_generator.py
 To rebuild the Windows executable after changing the program, install the requirements and run:
 
 ```powershell
-py -m PyInstaller --onefile --windowed --name run client_list_generator.py
-Copy-Item dist\run.exe .\run.exe
+py -m PyInstaller --noconfirm run.spec
+Copy-Item "dist\Stamping list generator.exe" ".\Stamping list generator.exe"
 ```
 
 Use **Add PDF file(s)…** to select one or more PDFs. The selected file paths appear in the list. Select one or more rows and choose **Remove selected** to remove them from both the list and the generation input; **Clear all** removes every selected PDF. Choose **Create list** to combine records from the remaining files into one `.xlsx` workbook.

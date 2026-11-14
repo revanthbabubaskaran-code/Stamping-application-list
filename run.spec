@@ -22,7 +22,7 @@ exe = EXE(
     a.binaries,
     a.datas,
     [],
-    name='run',
+    name='Stamping list generator',
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,
